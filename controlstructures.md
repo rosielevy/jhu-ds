@@ -1,7 +1,7 @@
 # jhu-ds
 JHU Data Science
-
-###Control Structures
+```
+#Control Structures
 
 for(i in 1:10) {
   print(i)
@@ -74,3 +74,4 @@ for(i in 1:100) {
 }
 
 #return signals that a function should exit and return a given value
+```
