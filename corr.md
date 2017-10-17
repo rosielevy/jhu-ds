@@ -7,9 +7,9 @@ corr<-function(directory,threshold = 0){
       
       nob <- numeric()
       
-      corr <- vector(mode = "numeric", length = 0)
+      corr <- c(0)
       
-      for(i in 332){
+      for(i in 1:332){
             
             data <- read.csv(files_full[i])
             
@@ -18,9 +18,10 @@ corr<-function(directory,threshold = 0){
             if(nob > threshold) {
                   
                   cleandata<- na.omit(data)
-                  keeps <- c("sulfate", "nitrate")
-                  cleandatasub <- cleandata[keeps]
-                  corr <- rbind(cor(cleandatasub))           
+                  cleandatan <- cleandata$nitrate
+                  cleandatas <- cleandata$sulfate
+                  corr <- c(corr, cor(cleandatan, cleandatas)) 
+                  
             }
             
       }
@@ -28,4 +29,6 @@ corr<-function(directory,threshold = 0){
       corr
       
 }
+
+#returning 0 as first value?
 ```
