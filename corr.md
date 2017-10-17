@@ -22,6 +22,7 @@ corr<-function(directory,threshold = 0){
                   cleandatas <- cleandata$sulfate
                   corr <- c(corr, cor(cleandatan, cleandatas, use = "complete.obs")) 
                   
+            } else { corr <- c(corr, 0)
             }
             
       }
@@ -30,5 +31,6 @@ corr<-function(directory,threshold = 0){
       
 }
 
-#returning 0 as first value?
+#how to show empty summary for 5000 threshold case?
+
 ```
