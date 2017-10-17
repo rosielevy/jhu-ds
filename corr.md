@@ -7,7 +7,7 @@ corr<-function(directory,threshold = 0){
       
       nob <- numeric()
       
-      corr <- c(0)
+      corr <- c()
       
       for(i in 1:332){
             
@@ -20,7 +20,7 @@ corr<-function(directory,threshold = 0){
                   cleandata<- na.omit(data)
                   cleandatan <- cleandata$nitrate
                   cleandatas <- cleandata$sulfate
-                  corr <- c(corr, cor(cleandatan, cleandatas)) 
+                  corr <- c(corr, cor(cleandatan, cleandatas, use = "complete.obs")) 
                   
             }
             
