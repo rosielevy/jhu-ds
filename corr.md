@@ -1,4 +1,4 @@
-__corr work in progress__
+__corr__
 
 ```
 corr<-function(directory,threshold = 0){
@@ -7,7 +7,7 @@ corr<-function(directory,threshold = 0){
       
       nob <- numeric()
       
-      corr <- c()
+      corr <- numeric()
       
       for(i in 1:332){
             
@@ -30,7 +30,5 @@ corr<-function(directory,threshold = 0){
       corr
       
 }
-
-#how to show empty summary for 5000 threshold case?
 
 ```
